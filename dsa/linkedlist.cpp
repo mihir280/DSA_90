@@ -112,17 +112,10 @@ int main(){
    InsertAttail(head,4);
    InsertAttail(head,5);
    InsertAttail(head,6);
-//    int key=2;
-//    searching(head,3);
+
    display(head);
 
-// Node* temp=head;
-// reverseLinked(head);
-// while(temp!=NULL){
-//     cout<<temp->data<<" ";
-//     temp=temp->next;
 
-// }
 
 
 
