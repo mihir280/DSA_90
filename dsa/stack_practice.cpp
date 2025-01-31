@@ -1,4 +1,5 @@
 #include<iostream>
+#include<stack>
 using namespace std;
 
 class Stack{
@@ -39,24 +40,48 @@ class Stack{
         return arr[top];
     }
 
-    
+    void reversing(string s){
+
+    }
 
 
 };
 
+void reversing(string s){
+    stack<string> st;
+
+    for(int i=0;i<s.size();i++){
+        string word="";
+        while(s[i]!=' ' && i<s.length()){
+            word=word+s[i];
+            i++;
+        }
+        st.push(word);
+    }
+
+    while(!st.empty()){
+        cout<<st.top()<<" ";
+        st.pop();
+    }
+}
+
 int main(){
     
     // Stack.push(1);
-    Stack s(5);
+    // Stack s(5);
 
-    for(int i=0;i<6;i++){
-        s.push(i);
-    }
+    // for(int i=0;i<6;i++){
+    //     s.push(i);
+    // }
 
-    for(int i=0;i<5;i++){
-        cout<<s.peek()<<" ";
-        s.pop();
-    }
+    // for(int i=0;i<5;i++){
+    //     cout<<s.peek()<<" ";
+    //     s.pop();
+    // }
+
+    string s="how are you";
+    reversing(s);
+    
 
     return 0;
 }
