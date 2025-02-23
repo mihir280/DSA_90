@@ -1,12 +1,12 @@
 #include<iostream>
 #include<unordered_map>
-#include<list>
+#include<vector>
 using namespace std;
 
 class graph{
     public:
 
-    unordered_map<int,list<int>> adj;
+    unordered_map<int,vector<int>> adj;
 
     void addedge(int u, int v, bool direction){
 
