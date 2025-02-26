@@ -61,7 +61,21 @@ void level(Node* root){
         }
     }
     }
+
 }
+
+int heights(Node *root){
+    if(root==NULL){
+        return 0;
+    }
+
+    int left=heights(root->left);
+    int right=heights(root->right);
+
+    return max(left,right)+1;
+}
+
+
 // 1 3 7 -1 -1 11 -1 -1 5 7 -1 -1 -1
 
 int main(){
