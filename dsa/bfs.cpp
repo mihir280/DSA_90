@@ -7,7 +7,7 @@
 
 
 
-void lists(unordered_map<int,list<int>> &adj, vector<vector<int>> &edge){
+void lists(unordered_map<int,list<int>> adj, vector<vector<int>> edge){
     for(int i=0;i<edge.size();i++){
         int u=edge[i][0];
         int v=edge[i][1];
@@ -17,7 +17,7 @@ void lists(unordered_map<int,list<int>> &adj, vector<vector<int>> &edge){
     }
 }
 
-void bfs(unordered_map<int,list<int>> &adj,vector<int> &ans,unordered_map<int,bool> &visited,int node){
+void bfs(unordered_map<int,list<int>> adj,vector<int> ans,unordered_map<int,bool> visited,int node){
     queue<int> q;
     q.push(node);
     visited[node]=1;
@@ -36,7 +36,7 @@ void bfs(unordered_map<int,list<int>> &adj,vector<int> &ans,unordered_map<int,bo
 }
 
 
-vector<int> bfsTraversal(int n, vector<vector<int>> &edge){
+vector<int> bfsTraversal(int n, vector<vector<int>> edge){
     // Write your code here.
     unordered_map<int,list<int>> adj;
     vector<int> ans;
