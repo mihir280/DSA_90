@@ -66,6 +66,8 @@ void deleteatMiddle(Node* & head){
     Node* temp=head;
     int count=0;
     while(count<3){
+        temp=temp->next;
+        count++;
         
     }
 }
