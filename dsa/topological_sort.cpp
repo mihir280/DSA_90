@@ -30,11 +30,13 @@ int main(){
             q.push(i);
         }
     }
+    // for cycle detection make a count;
+    int count=0;
     vector<int> ans;
     while(!q.empty()){
         int front=q.front();
         q.pop();
-
+        count++;
         ans.push_back(front);
 
         for(auto i:adj[front]){
@@ -45,6 +47,12 @@ int main(){
         }
 
 
+    }
+
+    if(count==v){
+        cout<<"false";
+    }else{
+        cout<<"true";
     }
 
 
